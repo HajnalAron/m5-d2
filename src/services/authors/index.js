@@ -23,9 +23,12 @@ const currentPath = fileURLToPath(import.meta.url);
 const currentDir = dirname(currentPath);
 const authorsPath = join(currentDir, "authors.json");
 
+// Get all authors
 authorsRouter.get("/", (request, response) => {
   response.send(JSON.parse(fs.readFileSync(authorsPath)));
 });
+
+// Get author by ID
 authorsRouter.get("/:authorId", (request, response) => {
   const prevAuthors = JSON.parse(fs.readFileSync(authorsPath));
   const targetAuthor = prevAuthors.find(
@@ -35,12 +38,16 @@ authorsRouter.get("/:authorId", (request, response) => {
     response.send(targetAuthor);
   } else response.send("Author not found");
 });
+
+//Post a new author
 authorsRouter.post("/", (request, response) => {
   const newAuthor = { ...request.body, id: uniqid(), createdAt: new Date() };
   const prevAuthors = JSON.parse(fs.readFileSync(authorsPath));
   prevAuthors.push(newAuthor);
   fs.writeFileSync(authorsPath, prevAuthors);
 });
+
+//Modify an author
 authorsRouter.put("/:authorId", (request, response) => {
   const prevAuthors = JSON.parse(fs.readFileSync(authorsPath));
   const targetAuthorIndex = prevAuthors.findIndex(
@@ -48,10 +55,19 @@ authorsRouter.put("/:authorId", (request, response) => {
   );
   prevAuthors[targetAuthorIndex] = {
     ...prevAuthors[targetAuthorIndex],
-    ...request.body
+    ...request.body,
+    upDatedAt: new Date()
   };
   fs.writeFileSync(authorsPath, prevAuthors);
 });
-authorsRouter.delete("/:authorId", (request, response) => {});
+
+//Delete an author
+authorsRouter.delete("/:authorId", (request, response) => {
+  const prevAuthors = JSON.parse(fs.readFileSync(authorsPath));
+  const filteredAuthors = prevAuthors.filter(
+    (author) => author.id !== request.params.authorId
+  );
+  fs.writeFileSync(authorsPath, JSON.stringify(filteredAuthors));
+});
 
 export default authorsRouter;
