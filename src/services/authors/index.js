@@ -45,6 +45,7 @@ authorsRouter.post("/", (request, response) => {
   const prevAuthors = JSON.parse(fs.readFileSync(authorsPath));
   prevAuthors.push(newAuthor);
   fs.writeFileSync(authorsPath, JSON.stringify(prevAuthors));
+  response.send(newAuthor);
 });
 
 //Modify an author
@@ -59,6 +60,9 @@ authorsRouter.put("/:authorId", (request, response) => {
     upDatedAt: new Date()
   };
   fs.writeFileSync(authorsPath, JSON.stringify(prevAuthors));
+  response.send(
+    "Author has been modified with the id of:" + request.params.authorId
+  );
 });
 
 //Delete an author
@@ -68,6 +72,9 @@ authorsRouter.delete("/:authorId", (request, response) => {
     (author) => author.id !== request.params.authorId
   );
   fs.writeFileSync(authorsPath, JSON.stringify(filteredAuthors));
+  response.send(
+    "Author has been deleted with the id of:" + request.params.authorId
+  );
 });
 
 export default authorsRouter;
