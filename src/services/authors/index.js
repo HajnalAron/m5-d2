@@ -44,7 +44,7 @@ authorsRouter.post("/", (request, response) => {
   const newAuthor = { ...request.body, id: uniqid(), createdAt: new Date() };
   const prevAuthors = JSON.parse(fs.readFileSync(authorsPath));
   prevAuthors.push(newAuthor);
-  fs.writeFileSync(authorsPath, prevAuthors);
+  fs.writeFileSync(authorsPath, JSON.stringify(prevAuthors));
 });
 
 //Modify an author
@@ -58,7 +58,7 @@ authorsRouter.put("/:authorId", (request, response) => {
     ...request.body,
     upDatedAt: new Date()
   };
-  fs.writeFileSync(authorsPath, prevAuthors);
+  fs.writeFileSync(authorsPath, JSON.stringify(prevAuthors));
 });
 
 //Delete an author
