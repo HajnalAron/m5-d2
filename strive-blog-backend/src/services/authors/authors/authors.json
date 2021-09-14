@@ -1,0 +1,10 @@
+[
+  {
+    "name": "author",
+    "surname": "test",
+    "ID": 1,
+    "email": "test@test.test",
+    "date of birth": "1000.01.01",
+    "avatar": "https://ui-avatars.com/api/?name=John+Doe"
+  }
+]
