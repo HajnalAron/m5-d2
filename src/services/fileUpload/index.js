@@ -13,7 +13,6 @@ filesRouter.post(
   async (req, res, next) => {
     try {
       console.log(req.file);
-
       const { originalname } = req.file;
       const [name, extension] = originalname.split(".");
       const filename = `${req.params.id}.${extension}`;
