@@ -13,7 +13,7 @@ import { join } from "path";
 import filesRouter from "./services/fileUpload/index.js";
 
 const server = express();
-const port = process.env.PORT || 3001;
+export const port = process.env.PORT || 3001;
 
 server.use(cors());
 server.use(express.json());

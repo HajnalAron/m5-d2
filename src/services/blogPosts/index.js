@@ -92,6 +92,7 @@ blogPostsRouter.put("/:blogPostId", (request, response, next) => {
 // DELETE /blogPosts /123 => delete the blogpost with the given id
 blogPostsRouter.delete("/:blogPostId", (request, response, next) => {
   try {
+    console.log(request);
     filterOutBlogPost(request.params.blogPostId);
     response
       .status(200)

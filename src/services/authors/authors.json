@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "name": "Petra",
+    "surname": "Macejkovic",
+    "email": "Mollie93@hotmail.com",
+    "dateOfBirth": "Sun May 02 2021 08:56:32 GMT+0200 (Central European Summer Time)",
+    "avatar": "https://cdn.fakercloud.com/avatars/juamperro_128.jpg",
+    "id": "1gezy5ccktwz9iho",
+    "createdAt": "2021-09-23T13:35:17.723Z"
+  },
+  {
+    "name": "Dawn",
+    "surname": "Medhurst",
+    "email": "Vivian_Little@yahoo.com",
+    "dateOfBirth": "Mon Feb 08 2021 18:17:57 GMT+0100 (Central European Standard Time)",
+    "avatar": "https://cdn.fakercloud.com/avatars/ccinojasso1_128.jpg",
+    "id": "1gezy5ccktwz9num",
+    "createdAt": "2021-09-23T13:35:24.670Z"
+  },
+  {
+    "name": "Jo",
+    "surname": "Grant",
+    "email": "Francis.Kemmer@gmail.com",
+    "dateOfBirth": "Tue Oct 20 2020 02:21:31 GMT+0200 (Central European Summer Time)",
+    "avatar": "https://cdn.fakercloud.com/avatars/surgeonist_128.jpg",
+    "id": "1gezy5ccktwz9o8l",
+    "createdAt": "2021-09-23T13:35:25.173Z"
+  },
+  {
+    "name": "Dejah",
+    "surname": "Zulauf",
+    "email": "Levi.Bosco@yahoo.com",
+    "dateOfBirth": "Wed Apr 07 2021 04:17:24 GMT+0200 (Central European Summer Time)",
+    "avatar": "https://cdn.fakercloud.com/avatars/daykiine_128.jpg",
+    "id": "1gezy5ccktwz9olt",
+    "createdAt": "2021-09-23T13:35:25.649Z"
+  },
+  {
+    "name": "Kay",
+    "surname": "Barton",
+    "email": "Kiera69@hotmail.com",
+    "dateOfBirth": "Thu Jul 01 2021 23:17:35 GMT+0200 (Central European Summer Time)",
+    "avatar": "https://cdn.fakercloud.com/avatars/kushsolitary_128.jpg",
+    "id": "1gezy5ccktwz9owo",
+    "createdAt": "2021-09-23T13:35:26.040Z"
+  },
+  {
+    "name": "Dominic",
+    "surname": "Bergnaum",
+    "email": "Magdalena_Anderson45@hotmail.com",
+    "dateOfBirth": "Wed Apr 14 2021 16:20:09 GMT+0200 (Central European Summer Time)",
+    "avatar": "https://cdn.fakercloud.com/avatars/katiemdaly_128.jpg",
+    "id": "1gezy5ccktwz9pat",
+    "createdAt": "2021-09-23T13:35:26.549Z"
+  }
+]
